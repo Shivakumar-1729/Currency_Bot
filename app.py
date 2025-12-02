@@ -14,7 +14,7 @@ def get_conversion(source_currency,target_currency,source_amount):
         return rate*source_amount
         
 
-@app.route('/',methods=['POST'])
+@app.route('/webhook',methods=['POST'])
 def index():
     print('request sent')
     data = request.get_json()
